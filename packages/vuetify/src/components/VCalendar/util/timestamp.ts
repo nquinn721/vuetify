@@ -455,7 +455,7 @@ export function createIntervalList (timestamp: CalendarTimestamp, first: number,
   for (let i = 0; i < count; i++) {
     const mins = first + (i * minutes)
     const int = copyTimestamp(timestamp)
-    intervals.push(updateMinutes(int, mins, now))
+    intervals.push({ ...updateMinutes(int, mins, now), intervalIndex: i })
   }
 
   return intervals

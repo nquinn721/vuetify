@@ -221,6 +221,7 @@ export interface CalendarTimestamp {
   past: boolean
   present: boolean
   future: boolean
+  intervalIndex?: number
   category?: CalendarCategory
 }
 
